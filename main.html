@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu nav start -->
+    <header>
+    <nav class="main_page">
+      <div class="head_container_left">
+        <a href="events.html">
+          <img src="Icons/main_logo.png" alt="Logo" class="logo" />
+        </a>
+      </div>
+      <div class="head_container_center">
+        <div class="search_container">
+          <img src="Icons/search.png" class="search_icon" alt="search" />
+          <input type="text" placeholder="Search events" />
+          <div class="location">Mountain View, CA</div>
+          <button class="search_button">
+            <img src="Icons/search.png" alt="search" />
+          </button>
+        </div>
+      </div>
+      <div class="head_container_right">
+        <div class="language">
+          <img src="Icons/Vector.png" alt="Lang" />
+          <select id="languageSwitcher"onchange="switchLanguage(this.value)">
+  <option value="ru">Русский</option>
+  <option value="en">English</option>
+</select>
+        </div>
+        <button class="login_btn">Log in</button>
+        <button class="signup_btn">Sign up</button>
+      </div>
+    </nav>
+  </header>
+  <!-- Menu nav end -->
+</body>
+<script src="script.js"></script>
+</html>

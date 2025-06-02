@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    max-width: 1512px;
+}
+
+
+.main_page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border: 2px solid black;
+}
+
+.logo {
+  height: 40px;
+}
+
+.head_container_left,
+.head_container_center,
+.head_container_right {
+  display: flex;
+  align-items: center;
+}
+
+.head_container_center {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  flex-grow: 0;
+}
+
+.search_icon {
+  width: 20px;
+  margin: 0 8px;
+}
+
+.search_container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.location {
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  white-space: nowrap;
+}
+
+.search_button {
+  background-color: #f55b5b;
+  border: none;
+  padding: 10px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.search_button img {
+  width: 16px;
+  height: 16px;
+}
+
+.head_container_right {
+  gap: 16px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+ 
+}
+
+#languageSwitcher {
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+
+.login_btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-wrap: nowrap;
+}
+
+.signup_btn {
+  background-color: #00798A;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-wrap: nowrap;
+}
