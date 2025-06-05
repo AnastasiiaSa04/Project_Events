@@ -1,3 +1,13 @@
+ :root {
+  --font-main: 'Roboto';
+  --max-width-body: 1512px;
+  --btn-color: #00798A;
+  --hover-color: #005f6b;
+  --danger-color: #F65858;
+  --border-color: #ccc;
+  --text-white: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,20 +15,22 @@
 }
 
 body {
-    max-width: 1512px;
+  font-family: var(--font-main);
+  max-width: var(--max-width-body);
 }
-
 
 .main_page {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  border: 2px solid black;
+  padding: 15px 26px;
+  max-height: 64px;
+  max-width: var(--max-width-body);
 }
 
 .logo {
-  height: 40px;
+  height: 35px;
+  width: 119px;
 }
 
 .head_container_left,
@@ -36,11 +48,15 @@ body {
 .search_container {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
   background-color: white;
-  flex-grow: 0;
+  max-width: 592px;
+}
+
+.head_container_center .search_container {
+  width: 100%;
 }
 
 .search_icon {
@@ -53,19 +69,33 @@ body {
   border: none;
   outline: none;
   padding: 10px;
+  font-size: 16px;
+  max-width: 592px;
+  max-height: 42px;
 }
 
-.location {
+.location_head {
   padding: 10px;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid var(--border-color);
   white-space: nowrap;
+  font-size: 16px;
+}
+
+.location_head::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--border-color);
 }
 
 .search_button {
-  background-color: #f55b5b;
+  background-color: var(--danger-color);
   border: none;
-  padding: 10px;
-  border-radius: 0 8px 8px 0;
+  padding: 14px;
+  border-radius: 0 6px 6px 0;
   cursor: pointer;
 }
 
@@ -82,15 +112,14 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
- 
 }
 
 #languageSwitcher {
-    padding: 5px;
-    border: none;
-    outline: none;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  outline: none;
 }
-
 
 .login_btn {
   background: none;
@@ -101,12 +130,82 @@ body {
 }
 
 .signup_btn {
-  background-color: #00798A;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+  background-color: var(--btn-color);
+  color: var(--text-white);
+  padding: 12px 24px;
   border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-wrap: nowrap;
+}
+
+.signup_btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.signup_btn:active {
+  transform: translateY(1px);
+}
+
+.info_main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1196px;
+  max-height: 461px;
+  margin-left: 100px;
+  padding: 15px;
+  margin-top: 30px;
+
+}
+
+ .info_join {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+ }
+
+ .info_join > h1 {
+  font-size: 42px;
+  line-height: 52px;
+  max-width: 601px;
+ }
+
+ .info_join p {
+  max-width: 590px;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 609px;
+  max-height: 72px;
+ }
+
+.join_meetup_btn {
+  background-color: var(--btn-color);
+  color: var(--text-white);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-wrap: nowrap;
+  width: 130px;
+
+}
+
+.join_meetup_btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.join_meetup_btn:active {
+  transform: translateY(1px);
 }
