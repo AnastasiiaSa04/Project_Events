@@ -19,7 +19,7 @@ body {
   /* max-width: var(--max-width-body); */
 }
 
-   /* ============== HEADER =========================*/
+/* ============== HEADER =========================*/
 
 .main_page {
   display: flex;
@@ -155,16 +155,18 @@ body {
 
 /* ============== HEADER END ==================*/
 
+.wrapper {
+  max-width: 1196px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
 /* ============ JOIN =================*/
 
 .info_main {
   display: flex;
   justify-content: space-between;
-  max-width: 1196px;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding: 30px;
-  
+  margin-bottom: 30px;
 }
 
 .info_main img {
@@ -173,25 +175,25 @@ body {
   margin: 0 auto;
 }
 
- .info_join {
+.info_join {
   display: flex;
   flex-direction: column;
   gap: 20px;
   
- }
+}
 
- .info_join > h1 {
+.info_join > h1 {
   font-size: 42px;
   line-height: 52px;
   max-width: 601px;
- }
+}
 
- .info_join p {
+.info_join p {
   max-width: 590px;
   font-size: 16px;
   line-height: 24px;
   max-width: 609px;
- }
+}
 
 .join_meetup_btn {
   background-color: var(--btn-color);
@@ -206,7 +208,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-wrap: nowrap;
   width: 130px;
-
+  
 }
 
 .join_meetup_btn:hover {
@@ -217,7 +219,6 @@ body {
 .join_meetup_btn:active {
   transform: translateY(1px);
 }
-
 /* ============================= JOIN END =============== */
 
 
@@ -236,10 +237,8 @@ h1, h2, h3, p {
 .events_header {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
   align-items: center;
-  margin: 0 auto;
-  max-width: 1196px;
+  margin-bottom: 30px;
 }
 
 .events_header .left {
@@ -276,11 +275,7 @@ h1, h2, h3, p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  max-width: 1196px;
-  margin: 0 auto;
-  padding: 30px;
- 
- 
+  margin-bottom: 30px;
 }
 
 /* ====================== Cards events =================== */
@@ -348,14 +343,17 @@ h1, h2, h3, p {
 }
 
 /* ================ Online Events =============== */
+.upcoming_online_events {
+  margin-bottom: 30px;
+}
+
 .online {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   max-width: 1196px;
-  padding: 30px;
-  bottom: 5px;
+  margin-bottom: 30px;
 }
 
 
@@ -375,7 +373,6 @@ h1, h2, h3, p {
   gap: 20px;
   max-width: 1196px;
   margin: 0 auto;
-  padding: 30px;
 }
 
 .event_card_container .event_card {
@@ -443,14 +440,12 @@ h1, h2, h3, p {
   align-items: center;
   border-radius: 8px;
   background-color: #97CAD114;
-  max-width: 1162px;
-  margin: 0 auto;
-  padding: 30px;
-  /* margin-top: 50px; */
+  padding: 30px 50px;
+  margin-bottom: 30px;
 }
 
 .text_join {
-  padding: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -472,7 +467,6 @@ h1, h2, h3, p {
   margin: 0 auto;
   width: 341px;
   height: 196px;
-  padding: 30px;
 }
 
 .text_join button {
@@ -500,10 +494,7 @@ h1, h2, h3, p {
 /* ================ TOP CATEGORIES ==================*/
 
 .top_categories {
-  margin: 0 auto;
-  max-width: 1192px;
-  padding: 30px;
-
+  margin-bottom: 30px;
 }
 
 .top_categories span {
@@ -537,7 +528,7 @@ h1, h2, h3, p {
   height: 112px;
   gap: 10px;
   
-
+  
 }
 
 .categories_container div img {
@@ -553,16 +544,16 @@ h1, h2, h3, p {
   .location_head {
     display: none;
   }
-
-
+  
+  
   .head_container_center {
     margin: 0 10px;
   }
-
+  
   .search_container {
     border-radius: 6px;
   }
-
+  
   .search_button {
     border-radius: 0 6px 6px 0;
   }

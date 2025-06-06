@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Menu nav start -->
-    <header>
+  <!-- Menu nav start -->
+  <header>
     <nav class="main_page">
       <div class="head_container_left">
-          <img src="Icons/main_logo.png" alt="Logo" class="logo" />
+        <img src="Icons/main_logo.png" alt="Logo" class="logo" />
       </div>
       <div class="head_container_center">
         <div class="search_container">
           <img src="Icons/search.png" class="search_icon" alt="search" />
-          <input type="text" placeholder="Search events"/>
+          <input type="text" placeholder="Search events" />
           <div class="divider"></div>
           <input type="text" class="location_head" placeholder="Mountain View, CA">
           <button class="search_button">
@@ -28,10 +30,10 @@
       <div class="head_container_right">
         <div class="language">
           <img src="Icons/Vector.png" alt="Lang" />
-          <select id="languageSwitcher"onchange="switchLanguage(this.value)">
-  <option value="ru">Русский</option>
-  <option value="en">English</option>
-</select>
+          <select id="languageSwitcher" onchange="switchLanguage(this.value)">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
         </div>
         <button class="login_btn">Log in</button>
         <button class="signup_btn">Sign up</button>
@@ -40,168 +42,96 @@
   </header>
   <!-- Menu nav end -->
 
-  <!-- Info and loin -->
-   <div class="info_main">
-   <div class="info_join">
-    <h1>The people platform—Where
-interests become friendships</h1>
-<p>Whatever your interest, from hiking and reading to networking and skill sharing,
-there are thousands of people who share it on Meetup. Events are happening
-every day—sign up to join the fun.</p>
-<a href="events.html">
-<button class="join_meetup_btn">Join Meetup</button>
-</a>
-   </div>
-   <img src="Images/bicycle.png" alt="bicycle">
-   </div>
-
-   <!-- Info and loin end -->
-
-   <!-- ========== List with cards  ===============-->
-
-  <div class="events_header">
-    <div class="left">
-      <span class="label">Events near</span>
-      <span class="location_badge">
-        <span class="location_text">Mountain View, CA</span>
-        <span class="icon"><img src="Icons/pan.png" alt="Location Icon"></span>
-      </span>
-    </div>
-    <a href="#" class="see_all">See all events</a>
-  </div>
-
-  <div class="cards_grid">
-    <div class="event_card">
-      <img src="Images/portal1.webp.png" alt="Day Trading Idea and Strategy" />
-      <div class="event_content">
-        <h3>Day Trading Idea and Strategy</h3>
-        <p class="category">Business · 5 km</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Mon, Mar 18 · 7:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">1 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
+  <div class="wrapper">
+    <!-- Info and loin -->
+    <div class="info_main">
+      <div class="info_join">
+        <h1>The people platform—Where
+          interests become friendships</h1>
+        <p>Whatever your interest, from hiking and reading to networking and skill sharing,
+          there are thousands of people who share it on Meetup. Events are happening
+          every day—sign up to join the fun.</p>
+        <a href="events.html">
+          <button class="join_meetup_btn">Join Meetup</button>
+        </a>
       </div>
+      <img src="Images/bicycle.png" alt="bicycle">
     </div>
 
-    <div class="event_card">
-      <img src="Images/portal2.png" alt="Networking with JPMorgan Chase" />
-      <div class="event_content">
-        <h3>Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
-        <p class="category">Business (25 km)</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Tue, Mar 19 · 5:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">41 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
+    <!-- Info and loin end -->
+
+    <!-- ========== List with cards  ===============-->
+
+    <div class="events_header">
+      <div class="left">
+        <span class="label">Events near</span>
+        <span class="location_badge">
+          <span class="location_text">Mountain View, CA</span>
+          <span class="icon"><img src="Icons/pan.png" alt="Location Icon"></span>
+        </span>
       </div>
+      <a href="#" class="see_all">See all events</a>
     </div>
 
-    <div class="event_card">
-      <img src="Images/portal3.png" alt="Tech Talks and Quiz" />
-      <div class="event_content">
-        <h3>Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases</h3>
-        <p class="category">Technology</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Wed, Mar 13 · 6:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">40 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="event_card">
-      <img src="Images/portal4.png" alt="INFORMS SF Event" />
-      <div class="event_content">
-        <h3>INFORMS San Francisco Chapter In-Person Event</h3>
-        <p class="category">Health and Wellbeing (50 km)</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 28 · 5:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">41 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="event_card">
-      <img src="Images/portal5.png" alt="ROS By-The-Bay March 2024" />
-      <div class="event_content">
-        <h3>ROS By-The-Bay March 2024</h3>
-        <p class="category">Social Activities</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 21 · 6:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">51 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="event_card">
-      <img src="Images/portal6.png" alt="Free Christian Singles Dinner" />
-      <div class="event_content">
-        <h3>Free Christian Singles' Dinner</h3>
-        <p class="category">Hobbies and Passions (10 km)</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Fri, Mar 29 · 6:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">11 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="event_card">
-      <img src="Images/portal7.png" alt="Deep Dive into RAG Architectures" />
-      <div class="event_content">
-        <h3>In-person: Deep Dive into RAG Architectures (Food served)</h3>
-        <p class="category">Hobbies and Passions (50 km)</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 5:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">16 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="event_card">
-      <img src="Images/portal8.png" alt="Deep Dive into RAG Architectures" />
-      <div class="event_content">
-        <h3>In-person: Deep Dive into RAG Architectures (Food served)</h3>
-        <p class="category">Hobbies and Passions (50 km)</p>
-        <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 5:00 PM PDT</p>
-        <div class="badges">
-          <span><img src="Icons/check.png" alt="Check Icon">16 going</span>
-          <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="upcoming_online_events">
-    <div class="online">
-      <span class="online_events">Upcoming online events</span>
-      <span class="see_all_second">See all events</span>
-    </div>
-
-    <div class="event_card_container">
+    <div class="cards_grid">
       <div class="event_card">
-        <img src="Images/portal9.png" alt="On-Demand Interviews" />
+        <img src="Images/portal1.webp.png" alt="Day Trading Idea and Strategy" />
         <div class="event_content">
-          <h3>Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers</h3>
-          <p class="category">Business (25 km)</p>
-          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 6:00 PM PDT</p>
+          <h3>Day Trading Idea and Strategy</h3>
+          <p class="category">Business · 5 km</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Mon, Mar 18 · 7:00 PM PDT</p>
           <div class="badges">
-            <span><img src="Icons/check.png" alt="Check Icon">3 going</span>
+            <span><img src="Icons/check.png" alt="Check Icon">1 going</span>
             <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
           </div>
         </div>
       </div>
 
       <div class="event_card">
-        <img src="Images/portal10.png" alt="Vision Pro Meetup" />
+        <img src="Images/portal2.png" alt="Networking with JPMorgan Chase" />
         <div class="event_content">
-          <h3>Vision Pro Developers Online Meetup</h3>
+          <h3>Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
+          <p class="category">Business (25 km)</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Tue, Mar 19 · 5:00 PM PDT</p>
+          <div class="badges">
+            <span><img src="Icons/check.png" alt="Check Icon">41 going</span>
+            <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="event_card">
+        <img src="Images/portal3.png" alt="Tech Talks and Quiz" />
+        <div class="event_content">
+          <h3>Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases</h3>
           <p class="category">Technology</p>
-          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Wed, Mar 13 · 7:00 PM PDT</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Wed, Mar 13 · 6:00 PM PDT</p>
+          <div class="badges">
+            <span><img src="Icons/check.png" alt="Check Icon">40 going</span>
+            <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="event_card">
+        <img src="Images/portal4.png" alt="INFORMS SF Event" />
+        <div class="event_content">
+          <h3>INFORMS San Francisco Chapter In-Person Event</h3>
+          <p class="category">Health and Wellbeing (50 km)</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 28 · 5:00 PM PDT</p>
+          <div class="badges">
+            <span><img src="Icons/check.png" alt="Check Icon">41 going</span>
+            <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="event_card">
+        <img src="Images/portal5.png" alt="ROS By-The-Bay March 2024" />
+        <div class="event_content">
+          <h3>ROS By-The-Bay March 2024</h3>
+          <p class="category">Social Activities</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 21 · 6:00 PM PDT</p>
           <div class="badges">
             <span><img src="Icons/check.png" alt="Check Icon">51 going</span>
             <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
@@ -210,11 +140,24 @@ every day—sign up to join the fun.</p>
       </div>
 
       <div class="event_card">
-        <img src="Images/portal11.png" alt="Significant Musical Moments" />
+        <img src="Images/portal6.png" alt="Free Christian Singles Dinner" />
         <div class="event_content">
-          <h3>Significant Musical Moments</h3>
+          <h3>Free Christian Singles' Dinner</h3>
           <p class="category">Hobbies and Passions (10 km)</p>
-          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Wed, Mar 13 · 6:00 PM PDT</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Fri, Mar 29 · 6:00 PM PDT</p>
+          <div class="badges">
+            <span><img src="Icons/check.png" alt="Check Icon">11 going</span>
+            <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="event_card">
+        <img src="Images/portal7.png" alt="Deep Dive into RAG Architectures" />
+        <div class="event_content">
+          <h3>In-person: Deep Dive into RAG Architectures (Food served)</h3>
+          <p class="category">Hobbies and Passions (50 km)</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 5:00 PM PDT</p>
           <div class="badges">
             <span><img src="Icons/check.png" alt="Check Icon">16 going</span>
             <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
@@ -223,79 +166,139 @@ every day—sign up to join the fun.</p>
       </div>
 
       <div class="event_card">
-        <img src="Images/portal12.png" alt="Intro to Power BI Webinar" />
+        <img src="Images/portal8.png" alt="Deep Dive into RAG Architectures" />
         <div class="event_content">
-          <h3>FREE Webinar: Introduction to Power BI</h3>
-          <p class="category">Technology</p>
-          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 5:30 PM PDT</p>
+          <h3>In-person: Deep Dive into RAG Architectures (Food served)</h3>
+          <p class="category">Hobbies and Passions (50 km)</p>
+          <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 5:00 PM PDT</p>
           <div class="badges">
-            <span><img src="Icons/check.png" alt="Check Icon">33 going</span>
+            <span><img src="Icons/check.png" alt="Check Icon">16 going</span>
             <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- =============== List with cards end ==============-->
+    <div class="upcoming_online_events">
+      <div class="online">
+        <span class="online_events">Upcoming online events</span>
+        <span class="see_all_second">See all events</span>
+      </div>
 
-  <!-- ============ HANDS UP ==============-->
+      <div class="event_card_container">
+        <div class="event_card">
+          <img src="Images/portal9.png" alt="On-Demand Interviews" />
+          <div class="event_content">
+            <h3>Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers</h3>
+            <p class="category">Business (25 km)</p>
+            <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 6:00 PM PDT</p>
+            <div class="badges">
+              <span><img src="Icons/check.png" alt="Check Icon">3 going</span>
+              <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="hands_container">
-    <div class="text_join">
-      <span>Join Meetup</span>
+        <div class="event_card">
+          <img src="Images/portal10.png" alt="Vision Pro Meetup" />
+          <div class="event_content">
+            <h3>Vision Pro Developers Online Meetup</h3>
+            <p class="category">Technology</p>
+            <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Wed, Mar 13 · 7:00 PM PDT</p>
+            <div class="badges">
+              <span><img src="Icons/check.png" alt="Check Icon">51 going</span>
+              <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event_card">
+          <img src="Images/portal11.png" alt="Significant Musical Moments" />
+          <div class="event_content">
+            <h3>Significant Musical Moments</h3>
+            <p class="category">Hobbies and Passions (10 km)</p>
+            <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Wed, Mar 13 · 6:00 PM PDT</p>
+            <div class="badges">
+              <span><img src="Icons/check.png" alt="Check Icon">16 going</span>
+              <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event_card">
+          <img src="Images/portal12.png" alt="Intro to Power BI Webinar" />
+          <div class="event_content">
+            <h3>FREE Webinar: Introduction to Power BI</h3>
+            <p class="category">Technology</p>
+            <p class="date"><img src="Icons/kalendar.png" alt="Calendar Icon"> Thu, Mar 14 · 5:30 PM PDT</p>
+            <div class="badges">
+              <span><img src="Icons/check.png" alt="Check Icon">33 going</span>
+              <span class="free"><img src="Icons/ticketFree.png" alt="Free Icon">Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============== List with cards end ==============-->
+
+    <!-- ============ HANDS UP ==============-->
+
+    <div class="hands_container">
+      <div class="text_join">
+        <span>Join Meetup</span>
         <p>People use Meetup to meet new people, learn new things, find support, get out of their
-         comfort zones, and pursue their passions, together. Membership is free.
+          comfort zones, and pursue their passions, together. Membership is free.
         </p>
-     <button>Sign up</button>
+        <button>Sign up</button>
+      </div>
+      <div class="hands_pic">
+        <img src="Images/Handsimage.png" alt="Logo hands">
+      </div>
     </div>
-          <div class="hands_pic">
-             <img src="Images/Handsimage.png" alt="Logo hands">
-          </div>  
-  </div>
 
-  <!-- ============ HANDS UP END ==============-->
+    <!-- ============ HANDS UP END ==============-->
 
-<!-- ================ Top categories ================-->
+    <!-- ================ Top categories ================-->
 
-  <div class="top_categories">
-    <span>Explore top categories</span>
-    <div class="categories_container">
-      <div>
-           <img src="Icons/travel_and_outdoor.svg.png" alt="Icon">
-           <p>Travel and Outdoor</p>
-      </div>
-      <div>
-           <img src="Icons/social_activities.svg fill.png" alt="Icon">
-           <p>Social Activities</p>
-      </div>
-      <div>
+    <div class="top_categories">
+      <span>Explore top categories</span>
+      <div class="categories_container">
+        <div>
+          <img src="Icons/travel_and_outdoor.svg.png" alt="Icon">
+          <p>Travel and Outdoor</p>
+        </div>
+        <div>
+          <img src="Icons/social_activities.svg fill.png" alt="Icon">
+          <p>Social Activities</p>
+        </div>
+        <div>
           <img src="Icons/hobbies_and_passions.svg fill.png" alt="Icon">
-           <p>Hobbies and Passions</p>
-      </div>
-      <div>
-           <img src="Icons/sports_and_fitness.svg fill.png" alt="Icon">
-           <p>Sports and Fitness</p>
-      </div>
-      <div>
-           <img src="Icons/health_and_wellness.svg.png" alt="Icon">
-           <p>Health and Wellbeing</p>
-      </div>
-      <div>
-           <img src="Icons/technology.svg.png" alt="Icon">
-           <p>Technology</p>
-      </div>
-      <div>
-           <img src="Icons/art_and_culture.svg.png" alt="Icon">
-           <p>Art and Culture</p>
-      </div>
-      <div>
-           <img src="Icons/games.svg.png" alt="Icon">
-           <p>Games</p>
+          <p>Hobbies and Passions</p>
+        </div>
+        <div>
+          <img src="Icons/sports_and_fitness.svg fill.png" alt="Icon">
+          <p>Sports and Fitness</p>
+        </div>
+        <div>
+          <img src="Icons/health_and_wellness.svg.png" alt="Icon">
+          <p>Health and Wellbeing</p>
+        </div>
+        <div>
+          <img src="Icons/technology.svg.png" alt="Icon">
+          <p>Technology</p>
+        </div>
+        <div>
+          <img src="Icons/art_and_culture.svg.png" alt="Icon">
+          <p>Art and Culture</p>
+        </div>
+        <div>
+          <img src="Icons/games.svg.png" alt="Icon">
+          <p>Games</p>
+        </div>
       </div>
     </div>
   </div>
-
 </body>
 <script src="script.js"></script>
 </html>
