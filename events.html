@@ -4,8 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+     <header>
+    <nav class="main_page">
+      <div class="head_container_left">
+        <a href="main.html">
+        <img src="Icons/main_logo.png" alt="Logo" class="logo" />
+        </a>
+      </div>
+      <div class="head_container_center">
+        <div class="search_container">
+          <img src="Icons/search.png" class="search_icon" alt="search" />
+          <input type="text" placeholder="Search events" />
+          <div class="divider_first"></div>
+          <input type="text" class="location_head" placeholder="Mountain View, CA">
+          <button class="search_button">
+            <img src="Icons/search.png" alt="search" />
+          </button>
+        </div>
+      </div>
+      <div class="head_container_right">
+        <div class="language">
+          <img src="Icons/Vector.png" alt="Lang" />
+          <select id="languageSwitcher" onchange="switchLanguage(this.value)">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+        </div class="head_container_right">
+        <button class="login_btn">Log in</button>
+        <button class="signup_btn">Sign up</button>
+      </div>
+    </nav>
+  </header>
+    <div id="wrapper_sec_page">
+    <div class="header_sec">
+      <h1>Events near New York, NY</h1>
+      <a href="#">Events</a>
+    </div>
+
+    <div class="main_section">
+      <div class="left_content">
+        <nav class="filters">
+          <div class="dropdown_all">
+            <div class="dropdown" data-filter="type">
+              <button class="dropbtn">Any type</button>
+              <img src="Icons/dropdown.png" alt="dropbtn">
+              <ul class="dropdown_menu">
+                <li data-value="all">Any type</li>
+                <li data-value="in-person">In-person</li>
+                <li data-value="online">Online</li>
+                <li data-value="hybrid">Hybrid</li>
+              </ul>
+            </div>
+            <div class="dropdown" data-filter="distance">
+              <button class="dropbtn">Any distance</button>
+              <img src="Icons/dropdown.png" alt="dropbtn">
+              <ul class="dropdown_menu">
+                <li data-value="all">Any distance</li>
+                <li data-value="5">5 km</li>
+                <li data-value="10">10 km</li>
+                <li data-value="25">25 km</li>
+                <li data-value="50">50 km</li>
+              </ul>
+            </div>
+            <div class="dropdown" data-filter="category">
+              <button class="dropbtn">Any category</button>
+              <img src="Icons/dropdown.png" alt="dropbtn">
+              <ul class="dropdown_menu">
+                <li data-value="all">Any category</li>
+                <li data-value="technology">Technology</li>
+                <li data-value="hobbies">Hobbies</li>
+                <li data-value="health">Health</li>
+                <li data-value="education">Education</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="cards_sec_page">
+          <div class="cards_column">
+            <img src="Images/event_518898207.webp.png" alt="img">
+            <div class="info">
+              <time>Wed, Mar 13 · 11:30 PM UTC</time>
+              <h4>All Nations - Manhattan Missions Church Bible Study</h4>
+              <p>Hobbies and Passions (5 km)</p>
+            </div>
+          </div>
+          <div class="cards_column">
+            <img src="Images/event_519218942.webp.png" alt="img">
+            <div class="info">
+              <time>Sat, Mar 23 · 3:00 PM UTC</time>
+              <h4>INFJ Personality Type - Coffee Shop Meet & Greet</h4>
+              <p>Hobbies and Passions (25 km)</p>
+              <span>99 attendees</span>
+            </div>
+          </div>
+          <div class="cards_column">
+            <img src="Images/event_519111663.webp.png" alt="img">
+            <div class="info">
+              <time>Wed, Mar 13 · 11:30 PM UTC</time>
+              <h4>NYC AI Users - AI Tech Talks, Demo & Social</h4>
+              <p>Technology (50 km)</p>
+              <span>43 attendees</span>
+              <span class="spot_left">2 spots left</span>
+            </div>
+          </div>
+          <div class="cards_column">
+            <img src="Images/event_519405643.webp.png" alt="img">
+            <div class="info">
+              <time>Wed, Mar 13 · 11:30 PM UTC</time>
+              <h4>Book 40+ Appointments Per Month Using AI and Automation</h4>
+              <p>Technology</p>
+            </div>
+          </div>
+          <div class="cards_column">
+            <img src="Images/event_519549716.webp.png" alt="img">
+            <div class="info">
+              <time>Wed, Mar 13 · 11:00 PM UTC</time>
+              <h4>Dump writing group weekly meetup</h4>
+              <p>Hobbies and Passions</p>
+              <span>77 attendees</span>
+            </div>
+          </div>
+          <div class="cards_column">
+            <img src="Images/event_519527424.webp.png" alt="img">
+            <div class="info">
+              <time>Thu, Mar 14 · 11:00 PM UTC</time>
+              <h4>Over 40s, 50s, & 60s Senior Singles Chat</h4>
+              <p>Hobbies and Passions</p>
+              <span>140 attendees</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="map_section">
+        <p>Find events near</p>
+        <h4>New York, NY</h4>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.817460186911!2d-74.005941!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316a7440a7%3A0x3f8b77e3b496d5d0!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1623423606797!5m2!1sen!2s"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <a href="https://www.google.com/maps/place/New+York,+NY" target="_blank" class="map_button">Browse in map ↗</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+<footer class="footer">
+  <div class="wrap_footer">
+  <div class="footer_top">
+    <h3>Create your own Meetup group.</h3>
+    <button>Get Started</button>
+  </div>
+
+  <div class="footer_middle">
+    <div class="footer_column">
+      <h4>Your Account</h4>
+      <a href="#">Sign up</a>
+      <a href="#">Log in</a>
+      <a href="#">Help</a>
+      <a href="#">Become an Affiliate</a>
+    </div>
+    <div class="footer_column">
+      <h4>Discover</h4>
+      <a href="#">Groups</a>
+      <a href="#">Calendar</a>
+      <a href="#">Topics</a>
+      <a href="#">Cities</a>
+      <a href="#">Online Events</a>
+      <a href="#">Local Guides</a>
+      <a href="#">Make Friends</a>
+    </div>
+    <div class="footer_column">
+      <h4>Meetup</h4>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Meetup Pro</a>
+      <a href="#">Careers</a>
+      <a href="#">Apps</a>
+      <a href="#">Podcast</a>
+    </div>
+  </div>
+    <div class="follow"><h4>Follow us</h4></div>
+    <div class="footer_column_social">
+      <div class="social_icons">
+        <img src="Icons/Link - Meetup on Facebook → SVG.png" alt="Facebook">
+        <img src="Icons/Link - Meetup on Twitter → SVG.png" alt="Twitter">
+        <img src="Icons/Link - Meetup on YouTube → SVG.png" alt="YouTube">
+        <img src="Icons/Link - Instagram → SVG.png" alt="Instagram">
+        <img src="Icons/Link - TikTok → SVG.png" alt="TikTok">
+      </div>
+        <div class="app_buttons">
+      <img src="Icons/Link - Download app from Google Play → download_en-US.svg.png" alt="Google Play">
+      <img src="Icons/Link - Download app from App Store → download_en-US.svg.png" alt="App Store">
+    </div>
+    </div>
+
+  <div class="footer_bottom">
+    <div class="footer_links">
+      <p>© 2024 Meetup</p>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Do Not Sell or Share My Personal Data</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Help</a>
+    </div>
+  </div>
+  </div>
+</footer>
 </body>
+<script src="script.js"></script>
 </html>

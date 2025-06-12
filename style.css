@@ -1,6 +1,8 @@
  :root {
   --font-main: 'Roboto';
   --max-width-body: 1512px;
+  --max-width-tablet: 1024px;
+  --max-width-phone: 767px;
   --btn-color: #00798A;
   --hover-color: #005f6b;
   --danger-color: #F65858;
@@ -78,7 +80,6 @@ body {
 .location_head {
   padding: 10px;
   border-left: 1px solid var(--border-color);
-  /* white-space: nowrap; */
   font-size: 16px;
 }
 
@@ -156,6 +157,12 @@ body {
 /* ============== HEADER END ==================*/
 
 .wrapper {
+  max-width: 1196px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+#wrapper_sec_page {
   max-width: 1196px;
   margin: 0 auto;
   padding: 50px 30px;
@@ -841,28 +848,462 @@ h1, h2, h3, p {
     .footer_links a:hover {
       text-decoration: underline;
       cursor: pointer;
+
     }
 
-/* ============= Media ==================*/
+#wrapper_sec_page {
+  max-width: 1196px;
+  margin: 0 auto;
+}
 
-@media (max-width: 768px) {
-  .location_head {
+/* ====== HEADER ====== */
+.header_sec {
+  max-width: 992px;
+  margin-bottom: 10px;
+ 
+}
+
+.main_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_sec h1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.header_sec a {
+  color: #00798A;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  border-bottom: 4px solid #00798A;
+}
+
+
+/* ====== ФИЛЬТРЫ ====== */
+.filters {
+  max-width: 992px;
+  margin-bottom: 40px;
+}
+
+.dropdown_all {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filters_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ====== ВЫПАДАЮЩИЕ СПИСКИ ====== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #F6F7F8;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-width: 160px;
+  text-align: left;
+}
+
+.dropdown img {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  pointer-events: none;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  background-color: #F6F7F8;
+  min-width: 160px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 1000;
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown_menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #212121;
+}
+
+.dropdown_menu li:hover {
+  background-color: #00798A;
+  color: white;
+}
+
+.dropdown:hover .dropdown_menu {
+  display: block;
+}
+
+/* ====== КАРТОЧКИ ====== */
+.cards_column {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 25px;
+  align-items: start;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  max-width: 604px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cards_column:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.info img {
+  width: 150px;
+  height: 84px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+
+.info time {
+  color: #7C6F50;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: block;
+}
+
+.info h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #212121;
+  margin: 6px 0;
+}
+
+.info p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #707070;
+  margin-bottom: 10px;
+}
+
+.info span {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #707070;
+}
+
+.info .spot_left {
+  color: #E32359;
+  margin-left: 30px;
+}
+
+/* ====== КАРТА ====== */
+.map_section {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.main_section p {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.main_section h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-size: 700;
+  margin-bottom: 15px;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #00798A;
+  border: 2px solid #00798A;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.map_button:hover {
+  background: #0077a5;
+  color: white;
+}
+
+
+/* ====== КОНТЕНТ С КАРТОЙ ====== */
+
+ .content_with_map {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.left_content {
+  flex: 1;
+}
+
+.cards_sec_page {
+  max-width: 604px;
+}
+
+/* ------------------ ПЛАНШЕТ: 768px – 1279px ------------------ */
+
+@media (max-width: 1279px) {
+
+  .main_page {
+    background: red;
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .input_header {
+    max-width: 342px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  /* Главный экран JOIN */
+  .info_main {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .join_meetup_btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .info_main img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  .info_join h1 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .info_join p {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  
+  /* Секция с карточками */
+  .cards_grid {
+    grid-template-rows: repeat(auto-fit, minmax(220px, 2fr));
+  }
+
+  .upcoming_online_events .event_card_container {
+    grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  /* Hands up */
+  .hands_container {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .hands_pic {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Топ категории */
+  .categories_container div {
+    width: calc(33% - 20px);
+    padding: 10px;
+  }
+
+  /* Популярные города */
+  .city_container { gap: 16px; }
+  .city p { font-size: 18px; }
+
+  /* Footer корректировки */
+  .footer .wrap_footer { padding: 40px 20px; }
+}
+
+/* ------------------ МОБИЛКА: до 767px ------------------ */
+@media (max-width: 767px) {
+  /* Общие paddings */
+  .wrapper, #wrapper_sec_page {
+    padding: 20px 15px;
+    margin: 0 auto;
+  }
+
+  .input_header {
     display: none;
   }
-  
-  
-  .head_container_center {
-    margin: 0 10px;
+
+  /* Навбар – вертикальное расположение с центрированием */
+  .main_page {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
   }
-  
-  .search_container {
-    border-radius: 6px;
+
+  .head_container_center, .head_container_right {
+    width: 100%;
+    justify-content: center;
+    flex: 1;
   }
-  
+ .location_head {
+    display: none;
+  }
+
   .search_button {
-    border-radius: 0 6px 6px 0;
+    display: none;
   }
+
+
+  /* JOIN */
+  .info_main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .info_main img { max-width: 100%; width: 280px; }
+  .info_join h1 {
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+  }
+  .info_join p {
+    font-size: 14px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .join_meetup_btn {
+    width: 100%;
+    max-width: 200px;
+    align-self: center;
+  }
+
+  /* Список карточек: одна колонка */
+  .cards_grid,
+  .upcoming_online_events .event_card_container {
+    grid-template-columns: 1fr;
+  }
+  .event_card, .event_card_container .event_card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* Hands up */
+  .hands_container {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+  .hands_pic { max-width: 280px; }
+
+  /* Топ категории – две колонки */
+  .categories_container, .city_container, .friendships_container_cards {
+    display: grid;
+    gap: 12px;
+  }
+  .categories_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .categories_container div {
+    padding: 8px;
+  }
+
+  /* Популярные города – две колонки */
+  .city_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .city img { width: 120px; height: 120px; }
+  .city p { font-size: 16px; }
+
+  /* How meetup works – одна колонка */
+  .how_works_container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  /* Friendship cards – одна колонка */
+  .friendships_container_cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer_links { flex-wrap: nowrap; gap: 12px; }
 }
+
+/* ------------------ ДОПОЛНИТЕЛЬНО: десктоп чуть более узкий: 1280–1439px ------------------ */
+@media (max-width: 1439px) {
+  .wrapper, #wrapper_sec_page { padding: 50px 20px; }
+  .info_main img { max-width: 340px; }
+}
+
+  /* Убедиться, что кнопка "Join" видима */
+  .head_container_right .join_btn {
+    display: block;
+  }
 
 
 
